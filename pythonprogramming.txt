@@ -1,0 +1,229 @@
+#1
+Py1-Myname.py
+input: 
+print("Techzenure : Python Programming");
+output:
+Techzenure : Python Programming
+
+
+#2
+Py2-Addition.py
+input:
+a=10;
+b=20;
+print("Addition :", (a+b));
+output:
+Addition : 30
+
+
+#3
+Py3-VariableNames.py
+input:
+product=100;
+age=25;
+
+print("Product", type(product))
+print("Age", type(age));
+output:
+Product <class 'int'>
+Age <class 'int'>
+
+
+#4
+Py4-Operators.py
+input:
+# Arithemetic Operators + - * %
+# int 50, 60, ...
+# float 5.5,6.5,...
+
+a,b = 6,2
+c=a%b
+d=a/b
+
+print(c,"type of",type(c))
+print(d,"type of",type(d))
+output:
+0 type of <class 'int'>
+3.0 type of <class 'float'>
+
+
+#5
+Py5-InputFromKeybord.py
+input:age=input("Enter age :")
+
+name=input("enter name :")
+print(name,"type of name", type(name))
+print("your age is",age,"type of",type(age))
+ouput:
+Enter age :25
+enter name :Tony
+Tony type of name <class 'str'>
+your age is 25 type of <class 'str'>
+
+#6
+Py6-ifconditions1
+input:
+ge = 18
+
+if age >= 18:
+    print("you can vote")
+else:
+    print("you can't vote")
+
+print("welcome to voting")
+output:
+you can vote
+welcome to voting
+
+
+#7
+Py7-ifconditions2
+input:
+num=int(input("Enter the number"))
+
+if num>0:
+    print("Positive number")
+elif num<0:
+    print("Negative number")
+else:
+    print("0 zero")
+
+print("welcome to numbers")
+output:
+Enter the number0
+0 zero
+welcome to numbers
+
+
+#8
+Py8-ifbigtwo.py
+input:
+a=10
+b=20
+
+if a>b:
+    print("a is big")
+elif a<b:
+    print("b is big")
+else:
+    print("both are equal")
+output:
+b is big
+
+
+#9
+Py9-ifbigthree.py
+input:
+a=100
+b=200
+c=300
+
+if a>b and a>c:
+    print("a is big")
+elif b>a and b>c:
+    print("b is big")
+elif c>a and c>b:
+    print("c is big")
+output:
+c is big
+
+
+#10
+Py10-oroperator.py
+input:
+#or operator
+
+color=input("Enter primary color:")
+
+if color=="red" or color=="green" or color=="blue":
+    print("It's primary color")
+else:
+    print("It's not primary color")
+output:
+Enter primary color:blue
+It's primary color
+
+
+#11
+Py11-OddEven.py
+input:
+#Find given number is Odd or Even
+
+no=20
+
+if no%2==0:
+    print("It is Even number")
+else:
+    print("It is Odd number")
+
+output:
+It is Even number
+
+
+#12
+Py12-Loop1-while.py
+input:
+#While loop program
+
+n=1
+while n<=10:
+    print(n)
+    n=n+1
+
+print("The End")
+
+output:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+The End
+
+
+#13
+Py13-Loop2-Even.py
+input:
+#While loop Even program generate 2 to 10
+
+n=2
+while n<=10:
+    print(n)
+    n=n+2
+
+print("The End")
+
+output:
+2
+4
+6
+8
+10
+The End
+
+
+#14
+Py14-Loop3-Odd.py
+input:
+
+#While loop Even program generate 1 to 10
+
+n=1
+while n<=10:
+    print(n)
+    n=n+2
+
+print("The End")
+
+output:
+1
+3
+5
+7
+9
+The End

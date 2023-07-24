@@ -1,0 +1,69 @@
+C:\mymongodata>mongo
+MongoDB shell version v5.0.19
+connecting to: mongodb://127.0.0.1:27017/?compressors=disabled&gssapiServiceName=mongodb
+Implicit session: session { "id" : UUID("79e539e4-bf25-4b6d-82c3-09a4c8165954") }
+MongoDB server version: 5.0.19
+================
+Warning: the "mongo" shell has been superseded by "mongosh",
+which delivers improved usability and compatibility.The "mongo" shell has been deprecated and will be removed in
+an upcoming release.
+For installation instructions, see
+https://docs.mongodb.com/mongodb-shell/install/
+================
+---
+The server generated these startup warnings when booting:
+        2023-07-18T14:21:05.783+05:30: Access control is not enabled for the database. Read and write access to data and configuration is unrestricted
+---
+> showdbs
+uncaught exception: ReferenceError: showdbs is not defined :
+@(shell):1:1
+>  show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+> use zenuredb
+switched to db zenuredb
+> db.employee.insert({"ename" :"Krishna","sal" :60000})
+WriteResult({ "nInserted" : 1 })
+> db.employee.insert({"ename" :"Tony", "sal" :50000})
+WriteResult({ "nInserted" : 1 })
+> show collections
+employee
+> db.employee.find({})
+{ "_id" : ObjectId("64b761eedb4aec8f62720a36"), "ename" : "Krishna", "sal" : 60000 }
+{ "_id" : ObjectId("64b7624bdb4aec8f62720a37"), "ename" : "Tony", "sal" : 50000 }
+> db.employee.insert({"ename":"Kumar", "sal":45000})
+WriteResult({ "nInserted" : 1 })
+> db.employee.find({},{"ename":1})
+{ "_id" : ObjectId("64b761eedb4aec8f62720a36"), "ename" : "Krishna" }
+{ "_id" : ObjectId("64b7624bdb4aec8f62720a37"), "ename" : "Tony" }
+{ "_id" : ObjectId("64b762c8db4aec8f62720a38"), "ename" : "Kumar" }
+> db.employee.find({},{"sal":1})
+{ "_id" : ObjectId("64b761eedb4aec8f62720a36"), "sal" : 60000 }
+{ "_id" : ObjectId("64b7624bdb4aec8f62720a37"), "sal" : 50000 }
+{ "_id" : ObjectId("64b762c8db4aec8f62720a38"), "sal" : 45000 }
+> db.students.insert({"sno":10,"sname":"Siva"})
+WriteResult({ "nInserted" : 1 })
+> show collections
+employee
+students
+> db.students.insert({"sno":12, "sname" :"Sundar"})
+WriteResult({ "nInserted" : 1 })
+> db.students.find({})
+{ "_id" : ObjectId("64b7637fdb4aec8f62720a39"), "sno" : 10, "sname" : "Siva" }
+{ "_id" : ObjectId("64b763e1db4aec8f62720a3a"), "sno" : 12, "sname" : "Sundar" }
+> db.students.insertMany([{"sno":200,"sname":"sai"},{"sno":300, "sname":"gopal"}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("64b76481db4aec8f62720a3b"),
+                ObjectId("64b76481db4aec8f62720a3c")
+        ]
+}
+> db.students.find({})
+{ "_id" : ObjectId("64b7637fdb4aec8f62720a39"), "sno" : 10, "sname" : "Siva" }
+{ "_id" : ObjectId("64b763e1db4aec8f62720a3a"), "sno" : 12, "sname" : "Sundar" }
+{ "_id" : ObjectId("64b76481db4aec8f62720a3b"), "sno" : 200, "sname" : "sai" }
+{ "_id" : ObjectId("64b76481db4aec8f62720a3c"), "sno" : 300, "sname" : "gopal" }
+> db.students.deleteMany({})
+{ "acknowledged" : true, "deletedCount" : 4 }
