@@ -1,0 +1,156 @@
+Microsoft Windows [Version 10.0.22000.2057]
+(c) Microsoft Corporation. All rights reserved.
+git commands:
+-------------
+C:\my-git>git init
+Initialized empty Git repository in C:/my-git/.git/
+
+C:\my-git>git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+C:\my-git>dir
+Volume in drive C is Local Disk
+ Volume Serial Number is B88F-2F35
+
+ Directory of C:\my-git
+
+24-07-2023  11:31    <DIR>          .
+19-07-2023  09:51             3,042 Mongodb Text.txt
+18-07-2023  19:09             2,291 Mongodb-Techzenure-18-07-2023.txt
+20-07-2023  12:20             2,777 python programming.txt
+               3 File(s)          8,110 bytes
+               1 Dir(s)  465,723,932,672 bytes free
+
+C:\my-git>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Mongodb Text.txt
+        Mongodb-Techzenure-18-07-2023.txt
+        python programming.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+C:\my-git>git add Mongodb Text.txt
+fatal: pathspec 'Mongodb' did not match any files
+
+C:\my-git>git add MongodbText.txt
+
+C:\my-git>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   MongodbText.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Mongodb-Techzenure-18-07-2023.txt
+        pythonprogramming.txt
+
+
+C:\my-git>git add pythonprogramming.txt
+
+C:\my-git>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   MongodbText.txt
+        new file:   pythonprogramming.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Mongodb-Techzenure-18-07-2023.txt
+
+
+C:\my-git>git commit -m
+error: switch `m' requires a value
+
+C:\my-git>git commit -m"commit code text:tony"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Tony Kumar@INBOOK_X2_PLUS.(none)')
+
+C:\my-git>
+C:\my-git>git commit -m"commiting exm:TONY"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Tony Kumar@INBOOK_X2_PLUS.(none)')
+
+C:\my-git>git config --global user.email "sivasundartony@gmail.com"
+
+C:\my-git>git config --global user.name "TonyKumar123"
+
+C:\my-git>git config --global user.password "SSTK@1999tk"
+
+C:\my-git>git commit -m"commit exm:TONY"
+[master (root-commit) 81f2d8d] commit exm:TONY
+ 2 files changed, 298 insertions(+)
+ create mode 100644 MongodbText.txt
+ create mode 100644 pythonprogramming.txt
+C:\my-git>git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'origin'
+
+C:\my-git>git puah -u origin master
+git: 'puah' is not a git command. See 'git --help'.
+
+The most similar command is
+        push
+
+C:\my-git>git -branch
+unknown option: -branch
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--config-env=<name>=<envvar>] <command> [<args>]
+
+C:\my-git>git branch -M main
+
+C:\my-git>git branch
+* main
+
+C:\my-git>git push -u origin main
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+C:\my-git>git remote add origin https://github.com/TonyKumar123/tonytech.git
+
+C:\my-git>git push -u origin main
+info: please complete authentication in your browser...
