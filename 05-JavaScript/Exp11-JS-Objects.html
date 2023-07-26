@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+       <body>
+         <h2> JavaScript Objects </h2>
+         <p id="mytony">Hello</p>
+
+       <script>
+            //create an object
+
+            var person ={
+                firstname:"TonyKumar",
+                lastname:"Ch",
+                age:24,
+                address:"jaggaiahpet",
+                personData : function(){
+                  return this.firstname + "Age:"+this.age +"Address:"+this.address
+
+                }
+            };
+              //display data from the object
+              document.getElementById("mytony").innerHTML=person.personData();
+       </script>
+       </body>
+       
+</html>
